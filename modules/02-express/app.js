@@ -11,10 +11,10 @@ const app = express()
 // External middleware
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// Requests are read from top to bottom of the file
+// Note: Requests are read from top to bottom of the file
 
 // External routes
-app.use(adminRoutes)
+app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
 // Catch all
