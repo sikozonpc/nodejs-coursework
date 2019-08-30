@@ -1,0 +1,11 @@
+extends layouts/main-layout.pug
+block content
+  main
+    if products.length > 0
+      h1 My Products:
+      ul
+        each product in products
+          li #{ product.title }
+    else
+      h1 Please add some products
+

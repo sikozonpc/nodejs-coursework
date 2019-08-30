@@ -1,13 +1,28 @@
 const express = require('express')
+const path = require('path')
+
+const rootDir = require('../util/path')
 
 const router = express.Router()
 
+// array of products
+const products = []
+
+/**
+ * 
+ */
 router.get('/add-product', (req, res) => {
-  res.send('<input type="text" placeholder="Product name"> <button action="POST" method="/" type="submit">Add</button>')
+  res.render('add-product', { 
+    path: '/admin/add-product',
+    pageTitle: 'Add new Product',
+   })
 })
 
-router.post('/product', (req, res) => {
+router.post('/add-product', (req, res) => {
+  products.push({ title: req.body.title })
+
   res.redirect('/')
 })
 
-module.exports = router
+module.exports.routes = router
+module.exports.products = products
