@@ -9,7 +9,7 @@ app.use('/private', (req, res, next) => {
 })
 
 app.use('/private', (req, res) => {
-  console.log('{Redirecting to -->} PUBLIC middleware route')
+  console.log('{Redirecting to -->} PUBLIC middleware route'y)
   res.redirect('/public')
 })
 
