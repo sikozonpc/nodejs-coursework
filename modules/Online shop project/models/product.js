@@ -1,12 +1,10 @@
-const fs = require('fs')
+ const fs = require('fs')
 const path = require('path')
 const rootDir = require('../util/path')
 
 const FILE = path.join(rootDir, 'data', 'products.json')
 
-/**
- * Returns a list of all of the products from its file 
- */
+/** Returns a list of all of the products from its file */
 const getProductsFromFile = (cb) => {
   fs.readFile(FILE, (err, data) => {
     let products = []
