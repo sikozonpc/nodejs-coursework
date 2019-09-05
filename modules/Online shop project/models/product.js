@@ -1,4 +1,4 @@
- const fs = require('fs')
+const fs = require('fs')
 const path = require('path')
 const rootDir = require('../util/path')
 
@@ -13,7 +13,7 @@ const getProductsFromFile = (cb) => {
 
     cb(products)
   })
-} 
+}
 
 /**
  * Represents a single Product entity
@@ -40,5 +40,5 @@ module.exports = class Product {
         console.log(err)
       })
     })
-  }   
+  }
 }

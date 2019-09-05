@@ -1,17 +1,17 @@
-const path = require('path');
+const path = require('path')
 
-const express = require('express');
+const express = require('express')
 
-const productsController = require('../controllers/products');
+const adminController = require('../controllers/admin')
 
-const router = express.Router();
+const router = express.Router()
 
 // /admin/add-product => GET
-router.get('/add-product', productsController.renderAddProduct);
+router.get('/add-product', adminController.renderAddProduct)
 // /admin/add-product => POST
-router.post('/add-product', productsController.postAddProduct);
+router.post('/add-product', adminController.postAddProduct)
 
-//TODO: should this be a diffrent set of products ?
-router.get('/products', productsController.renderAdminProducts)
+// TODO: should this be a diffrent set of products ?
+router.get('/products', adminController.renderAdminProducts)
 
-module.exports = router;
+module.exports = router
