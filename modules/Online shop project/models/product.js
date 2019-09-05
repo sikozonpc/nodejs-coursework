@@ -19,8 +19,11 @@ const getProductsFromFile = (cb) => {
  * Represents a single Product entity
  */
 module.exports = class Product {
-  constructor (title) {
+  constructor (title, imageUrl, description, price) {
     this.title = title
+    this.image = imageUrl
+    this.description = description
+    this.price = price
   }
 
   /** returns all of the existing products */

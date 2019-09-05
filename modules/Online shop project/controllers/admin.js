@@ -33,7 +33,9 @@ exports.renderAdminProducts = (req, res, next) => {
  * ADD - a new product to the array
  */
 exports.postAddProduct = (req, res, next) => {
-  const product = new Product(req.body.title)
+  const { title, price, description, image } = req.body
+
+  const product = new Product(title, image, description, price)
   product.save()
 
   res.redirect('/products')
